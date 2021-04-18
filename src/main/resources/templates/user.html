@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="webjars/bootstrap/4.6.0/css/bootstrap.min.css"/>
+
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        #sidebar-wrapper {
+            height: 100vh;
+            width: 16rem;
+        }
+
+        #sidebar-wrapper .nav-link {
+            width: 16rem;
+        }
+
+        #page-content-wrapper {
+            min-width: 81vw;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--Navbar on the top-->
+
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <div class="navbar-brand col-sm-3 col-md-2 mr-0 text-nowrap" id="navHeader"></div>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+    </ul>
+</nav>
+<br><br>
+
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="nav flex-column nav-pills pt-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="userPill" data-toggle="pill" href="#userInfo" role="tab"
+               aria-controls="userInfo" aria-selected="true"> User </a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane show active p-4" id="userInfo" role="tabpanel"
+                 aria-labelledby="userPill">
+                <h1>User information-page</h1>
+                <div class="card">
+                    <div class="card-header">
+                        <h4>About user</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th> ID</th>
+                                <th> Name</th>
+                                <th> Nickname</th>
+                                <th> Email</th>
+                                <th> Role</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr id="tableContent"></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="user.js"></script>
+</body>
+</html>
